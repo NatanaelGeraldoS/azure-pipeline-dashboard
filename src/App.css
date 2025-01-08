@@ -1,3 +1,44 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.marquee-container {
+    display: flex;
+    animation: marquee 30s linear infinite;
+}
+
+.marquee-wrapper {
+    display: flex;
+    overflow-x: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.marquee-container:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scrollVertical {
+    0% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(-50%);
+    }
+}
+.animate-scroll-vertical {
+    animation: scrollVertical 20s linear infinite;
+}
+
+.animate-scroll-vertical:hover {
+    animation-play-state: paused;
+}
